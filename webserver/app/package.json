@@ -1,0 +1,33 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "antd": "^3.18.1",
+    "caniuse-lite": "^1.0.30000974",
+    "firebase": "^6.2.4",
+    "react": "^16.4.2",
+    "react-charts": "^2.0.0-alpha.7",
+    "react-dom": "^16.4.2",
+    "react-heatmap-grid": "^0.8.1",
+    "react-iframe": "^1.8.0",
+    "react-router-dom": "^4.4.0-alpha.1",
+    "react-scripts": "1.1.4",
+    "react-simple-chatbot": "^0.6.1",
+    "react-sticky": "^6.0.3",
+    "react-table": "^6.10.0",
+    "styled-components": "^4.3.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "proxy": "http://localhost:8080",
+  "browserslist": [
+    ">0.2%",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}

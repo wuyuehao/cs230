@@ -1,0 +1,43 @@
+version: '3.6'
+
+services:
+  mongodb:
+    image: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - /casterlyrock/mongo_data:/data/db
+
+  mlflow:
+    build: ./mlflow
+    ports:
+      - "5000:5000"
+    volumes:
+      - /casterlyrock/mlruns:/mlruns 
+    links:
+      - mongodb
+
+  scheduler:
+    build: ./scheduler
+    links:
+      - mongodb
+    depends_on:
+      - mongodb
+    environment:
+      - EXTERNAL_IP=$EXTERNAL_IP 
+    volumes:
+      - /casterlyrock:/casterlyrock
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ~/.ssh:/root/.ssh
+
+  webserver:
+    build: ./webserver
+    ports:
+      - "3000:3000"
+      - "3001:3001"
+    links:
+      - mlflow
+      - mongodb
+    volumes:
+      - /casterlyrock:/casterlyrock
+      - /var/run/docker.sock:/var/run/docker.sock
