@@ -1,9 +1,0 @@
-flask
-tensorflow
-pandas
-docker
-flask_pymongo
-mlflow
-bert_tensorflow
-sklearn
-tensorflow_hub
