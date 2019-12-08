@@ -1,8 +1,8 @@
 ## About the project
 
-This is the repository we created for cs230. It is organized as following.
+This is the repository we created for cs230. It is organized in following structure.
 - winterfell - the python code we used for model development in jupyter notebook.
-- casterlyrock - a toolset we built for quick and scalable experimental. It allows us to choose base model, specify hyper parameters, submit the job to multiple GPU boxes, evaluate the result, generate report, compare between different excises and track all the jobs.
+- casterlyrock - a toolset we built for quick and scalable experimental runs. It allows us to choose base model, specify hyper parameters, submit the job to multiple GPU boxes, evaluate the result, generate report, compare between different excises and track all the jobs.
 - kingslanding - our final project report.
 
 
